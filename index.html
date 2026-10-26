@@ -21,7 +21,7 @@
         .show { display: block; }
         .section-label { padding: 1.5rem 2rem 0.5rem; font-size: 0.9rem; color: #888 !important; text-transform: uppercase; font-weight: 800; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; padding: 1rem 2rem; }
-        .card { background: #161618; border-radius: 1rem; height: 85px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid transparent; transition: 0.2s; }
+        .card { background: #161618; border-radius: 1rem; height: 85px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid transparent; transition: 0.2s; text-align: center; padding: 10px; }
         .card:hover { border-color: #fff; background: #222; }
         #player-screen { display: none; position: fixed; inset: 0; background: #000; z-index: 1000; }
         video { width: 100%; height: 100%; object-fit: contain; }
@@ -62,6 +62,7 @@
         <div class="section-label">🌍 INTERNATIONAL</div>
         <div class="grid">
             <div class="card" onclick="fetchIPTV('uk')">🇬🇧 UK TV</div>
+            <div class="card" onclick="fetchIPTV('uk2')">🇬🇧 UK 2 (Might Include Non Working Channels)</div>
             <div class="card" onclick="fetchIPTV('english')">🇺🇸 ENGLISH</div>
             <div class="card" onclick="fetchIPTV('iraq')">🇮🇶 Iraq</div>
             <div class="card" onclick="fetchIPTV('kurdish')">☀️ Kurdish</div>
@@ -104,6 +105,7 @@
         const urls = {
             'multimedia': 'https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8',
             'uk': 'https://iptv-org.github.io/iptv/countries/uk.m3u',
+            'uk2': 'https://experiencersinternational.github.io/tvsetup/config.m3u',
             'english': 'https://iptv-org.github.io/iptv/languages/eng.m3u',
             'iraq': 'https://iptv-org.github.io/iptv/countries/iq.m3u',
             'kurdish': 'https://iptv-org.github.io/iptv/languages/kur.m3u',
